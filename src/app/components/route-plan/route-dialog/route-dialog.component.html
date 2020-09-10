@@ -1,0 +1,34 @@
+<h1 mat-dialog-title>Action :: <strong>{{action}}</strong></h1>
+<div mat-dialog-content>
+  <div class="assign" *ngIf="action != 'Delete'; else elseTemplate">
+    <mat-form-field appearance="fill">
+      <mat-label>Salesperson</mat-label>
+      <mat-select [(ngModel)]="local_data.merchantid">
+        <mat-option>Salesperson</mat-option>
+        <mat-option *ngFor="let salesperson of salespersons"
+         [value]="salesperson.name">{{salesperson.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Supermarket</mat-label>
+      <mat-select [(ngModel)]="local_data.supermarketid">
+        <mat-option>Supermarket</mat-option>
+        <mat-option *ngFor="let supermarket of supermarkets" 
+        [value]="supermarket.name">{{supermarket.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input placeholder="{{action}} Comment" matInput [(ngModel)]="local_data.merchantcomment">
+    </mat-form-field>
+  </div>
+
+  <ng-template #elseTemplate>
+    Sure to delete route <b>{{local_data.visit_id}}</b>?
+  </ng-template>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="doAction()">{{action}}</button>
+  <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+</div>

@@ -1,0 +1,30 @@
+table{
+    width: 100%;
+    padding: 20px;
+}
+td{
+    text-align: left;
+}
+.addsalesperson{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+button{
+    margin: 20px;
+    background: #FCBF49;
+}
+img{
+    margin-right: 5px;
+}
+img:hover{
+    cursor: pointer;
+}
+#edit{
+    height: 30px;
+    width: 30px;
+}
+#delete{
+    height: 30px;
+    width: 25px;
+}

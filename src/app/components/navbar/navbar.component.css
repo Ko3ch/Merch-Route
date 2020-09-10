@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Gayathri&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    font-family: 'Gayathri', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fcbf49;
+    height: 12vh;
+    color: #14213d;
+    width: 100%;
+}
+nav h1{
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 40px;
+}
+.links ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.links ul li {
+    font-size: 18px;
+    margin-right: 50px;
+}
+.links ul li a{
+    color: #14213d;
+    text-decoration: none;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

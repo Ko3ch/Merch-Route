@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Gayathri&display=swap');
+
+
+agm-map{
+    height:590px ;
+    padding: 30px;
+    margin: 30px;
+}
+.row
+{   
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    font-family: 'Gayathri', sans-serif;
+}
+.col-md-4{
+    margin-left: 50px;
+}
+.col-md-4 input{
+    margin: 18px;
+    height: 30px;
+}
+
+button{
+    margin: 20px;
+    background: #FCBF49;
+    height: 30px;
+    border-radius: 5px;
+    width: 60px;
+    cursor: pointer;
+}
+
