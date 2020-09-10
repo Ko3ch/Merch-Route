@@ -33,7 +33,7 @@ export class MapService {
   }
 
   getSalespeople(page: number): Observable<ISalespeople[]> {
-    return this.httpClient.get<ISalespeople[]>(`${envDev.BASE_URL}/`, {
+    return this.httpClient.get<ISalespeople[]>(`http://05bbf9d118fe.ngrok.io/`, {
       headers : this.headers,
     }
     );

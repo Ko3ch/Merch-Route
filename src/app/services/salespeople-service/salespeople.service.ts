@@ -33,7 +33,7 @@ export class SalespeopleService {
   }
 
   getSalesPersons(): Observable<ISalespeople[]> {
-    return this.httpClient.get<ISalespeople[]>(`${envDev.BASE_URL}/merchants`, {
+    return this.httpClient.get<ISalespeople[]>(`http://05bbf9d118fe.ngrok.io/merchants`, {
       headers : this.headers,
     }
     );
@@ -47,7 +47,7 @@ export class SalespeopleService {
     param = param.append('password', password);
     param = param.append('typeid', typeId.toLocaleString());
 
-    return this.httpClient.post<ISalespeople>(`${envDev.BASE_URL}/${salespersonID}`,{
+    return this.httpClient.post<ISalespeople>(`http://05bbf9d118fe.ngrok.io/${salespersonID}`,{
       headers: this.headers,
       params: param,
     }

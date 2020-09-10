@@ -40,7 +40,7 @@ export class RoutePlanService {
   }
 
   getAssignedRoutes(): Observable<Route[]> {
-    return this.httpClient.get<Route[]>(`${envDev.BASE_URL}/routes/assigned`, {
+    return this.httpClient.get<Route[]>(`http://05bbf9d118fe.ngrok.io/routes/assigned`, {
       headers : this.headers,
     }
     );
@@ -54,7 +54,7 @@ export class RoutePlanService {
     param = param.append('assigndate',  assignDateTime.toLocaleString());
     param = param.append('assignbyid', assignbyid.toLocaleString());
 
-    return this.httpClient.get(`${envDev.BASE_URL}/${salespersonID}`, {
+    return this.httpClient.get(`http://05bbf9d118fe.ngrok.io/${salespersonID}`, {
       headers: this.headers,
       params: param,
     });

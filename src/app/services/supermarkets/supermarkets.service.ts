@@ -26,7 +26,7 @@ export class SupermarketsService {
   }
 
   getSupermarkets(): Observable<Supermarkets[]> {
-    return this.httpClient.get<Supermarkets[]>(`${envDev.BASE_URL}/supermarkets`, {
+    return this.httpClient.get<Supermarkets[]>(`http://05bbf9d118fe.ngrok.io/supermarkets`, {
       headers : this.headers,
     }
     );
